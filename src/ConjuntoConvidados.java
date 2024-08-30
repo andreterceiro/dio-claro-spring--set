@@ -2,6 +2,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ConjuntoConvidados {
+    /**
+     * Group of convidados
+     */
     public Set<Convidado> convidadosSet;
 
     /**
