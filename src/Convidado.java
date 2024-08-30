@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Convidado {
     /**
      * Nome do concidado
@@ -40,6 +42,28 @@ public class Convidado {
     @Override
     public String toString() {
         return "{Convidado: nome='" + this.getNome() + "', código do convite='" + String.valueOf(this.getCodigoConvite()) + "'}";
+    }
+
+    /**
+     * Método para comparação de dois objetos desta classe
+     */
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || this.getClass() != object.getClass()) {
+            return false;
+        }
+        Convidado other = (Convidado) object;
+        return other.getCodigoConvite() == this.getCodigoConvite();
+    }
+
+    /**
+     * The hashCode method helps the comparison of two objects of this class
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getCodigoConvite());
     }
 
 }
