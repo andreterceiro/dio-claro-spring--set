@@ -53,4 +53,32 @@ public class ConjuntoConvidados {
     public void exibirConvidados() {
         System.out.println(this.convidadosSet);
     }
+
+    /**
+     * Main method to help the execution of manual tests through terminal
+     * @param args CLI arguments (ignored)
+     */
+    public static void main(String[] args) {
+        ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidados dentro do set de convidados");
+
+        conjuntoConvidados.adicionarConvidado("André", 1);
+        conjuntoConvidados.adicionarConvidado("José", 1);
+        conjuntoConvidados.adicionarConvidado("Fátima", 2);
+        conjuntoConvidados.adicionarConvidado("Fátima", 2);
+        conjuntoConvidados.adicionarConvidado("Thais", 3);
+
+        conjuntoConvidados.exibirConvidados();
+
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidados dentro do set de convidados");
+
+        conjuntoConvidados.removerConvidadoPorCodigoConvite(3);
+
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidados dentro do set de convidados");
+
+        conjuntoConvidados.removerConvidadoPorCodigoConvite(1);
+
+        // Não removeu 2 com o mesmo ID porque nem cadastrou com o mesmo ID
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidados dentro do set de convidados");
+    }
 }
