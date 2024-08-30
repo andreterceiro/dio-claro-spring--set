@@ -46,7 +46,11 @@ public class Convidado {
 
     /**
      * Método para comparação de dois objetos desta classe
+     *
+     * @param object Object to be compared to this object
+     * @return boolean true if this instance equals to the passed object, otherwise false
      */
+    @Override
     public boolean equals(Object object) {
         if (this == object) {
             return true;
@@ -60,6 +64,8 @@ public class Convidado {
 
     /**
      * The hashCode method helps the comparison of two objects of this class
+     *
+     * @return Return the hash code related to this object
      */
     @Override
     public int hashCode() {
